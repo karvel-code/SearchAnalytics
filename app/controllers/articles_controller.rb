@@ -1,7 +1,11 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles  = Article.order("created_at DESC")
+    if params[:search].present?
+      @articles = Article.filter_by_title(params[:search])
+    else
+      @articles  = Article.order("created_at DESC")
+    end
   end
 
   def new
