@@ -10,7 +10,7 @@ class Article < ApplicationRecord
   ->(query) { where("title ILIKE ?", "%#{query}%") }
 
   def normalize_title
-    title.downcase!
+    title.downcase
   end
 
   def update_article_views
