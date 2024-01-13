@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RubyInline (3.14.0)
+      ZenTest (~> 4.3)
+    ZenTest (4.12.1)
     actioncable (7.0.8)
       actionpack (= 7.0.8)
       activesupport (= 7.0.8)
@@ -97,6 +100,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.12.0)
+    fuzzy-string-match (1.0.1)
+      RubyInline (>= 3.8.6)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -233,6 +238,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise (~> 4.9)
+  fuzzy-string-match (~> 1.0, >= 1.0.1)
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
