@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   def index
     if params[:search].present?
       @articles = Article.filter_by_title(params[:search])
+      Search.save_search(params[:search], current_user)
     else
       @articles  = Article.order("created_at DESC")
     end
