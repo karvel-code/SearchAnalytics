@@ -77,3 +77,5 @@ end
 gem "devise", "~> 4.9"
 
 gem 'fuzzy-string-match', '~> 1.0', '>= 1.0.1'
+
+gem "chartkick"

@@ -13,4 +13,14 @@ class Article < ApplicationRecord
     title.downcase!
   end
 
+  def update_article_views
+    if analytic.present?
+      views = analytic&.no_of_views
+      views = views += 1
+      analytic.update(no_of_views: views)
+    else
+      create_analytic(no_of_views: 1)
+    end
+  end
+
 end

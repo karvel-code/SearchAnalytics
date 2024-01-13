@@ -1,0 +1,13 @@
+<div>
+  <h1 class="text-3xl mt-8 font-bold leading-6 my-3 py-auto">Articles Search Analytics</h1>
+  <div class="mt-8">
+    <%= line_chart @search_data, xtitle: "Article", ytitle: "No of searches"  %>
+  </div>
+</div>
+
+<div>
+  <h1 class="text-3xl mt-8 font-bold leading-6 my-3 py-auto">Articles Views Analytics</h1>
+  <div class="mt-8">
+    <%= line_chart @view_data, xtitle: "Article", ytitle: "No of views"  %>
+  </div>
+</div>
