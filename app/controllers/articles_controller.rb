@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: :show
 
   def index
     if params[:search].present?
@@ -25,9 +26,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    # if @article.analytic.present?
+      @article.update_article_views
+    # end
+  end
+
   private
 
   def articles_params
     params.require(:article).permit(:title, :body)
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 end
