@@ -12,7 +12,6 @@
 
   <%= form_with(url: articles_path, method: :get, data: { filter_form_target: "form", turbo_frame: "articles"}) do %>
     <%= text_field_tag(:search, params[:search], placeholder: 'Search articles...', oninput: "this.form.requestSubmit()", class: "mt-4 py-3 px-4 block w-full border sborder-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600") %>
-      <%#= submit_tag('Search') %>
   <% end %>
 
   <%= turbo_frame_tag "articles" do %>
